@@ -1,0 +1,23 @@
+# Validation Configuration for Alpha Discovery Pipeline
+
+# Statistical Filter Thresholds
+min_ic: 0.015          # Minimum Information Coefficient
+min_ic_stability: 0.55 # Minimum fraction of positive daily ICs
+min_sharpe: 0.3        # Minimum annualized Sharpe ratio
+max_turnover: 0.6      # Maximum daily turnover
+max_complexity: 20     # Maximum expression complexity
+
+# Portfolio Construction
+n_quintiles: 5         # Number of quintiles for long-short portfolio
+holding_period: 1      # Holding period for forward returns (in days)
+
+# Temporal Splits
+train_ratio: 0.6
+validation_ratio: 0.2
+test_ratio: 0.2
+
+# Minimum samples in each split
+min_samples: 100
+
+# Whether to shuffle (should be false for temporal splits)
+shuffle: false

@@ -1,0 +1,36 @@
+# Core dependencies
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+sympy>=1.12.0
+
+# Symbolic regression
+pysr>=1.2.0
+
+# Scientific computing
+scikit-learn>=1.3.0
+statsmodels>=0.14.0
+pywavelets>=1.4.0
+numba>=0.57.0
+
+# Optimization
+optuna>=3.0.0
+
+# Utilities
+tqdm>=4.65.0
+pyyaml>=6.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Optional dependencies for extended features
+# Topological Data Analysis
+# ripser>=0.6.0
+# gudhi>=3.8.0
+
+# Information theory
+# dit>=1.2.0
+# npeet>=0.2.0

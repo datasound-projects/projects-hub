@@ -1,0 +1,45 @@
+# PySR Configuration for Grammar-Constrained Symbolic Regression
+# This configuration enforces the grammar constraints described in the methodology
+
+# Search Space Configuration
+binary_operators: ["+", "-", "*", "/"]
+unary_operators: ["abs", "neg"]
+max_size: 18
+max_depth: 5
+
+# Complexity and Parsimony
+parsimony: 0.012
+complexity_penalties:
+  "/": 2.0
+  "+": 1.0
+  "-": 1.0
+  "*": 1.0
+  "abs": 1.0
+  "neg": 1.0
+
+# Optimization Parameters
+n_populations: 30
+population_size: 50
+max_iterations: 100
+max_time: 900  # 15 minutes
+
+# Loss Function
+loss_function: "L1"  # MAE is more robust to outliers
+
+# Numerical Stability
+deterministic: true
+random_seed: 42
+allow_division_by_zero: false
+
+# Output Control
+n_top_expressions: 100
+include_complexity: true
+include_loss: true
+
+# Advanced Constraints
+allow_nested_operations: true
+max_nesting_depth: 2
+
+# Early Stopping
+early_stopping: true
+early_stopping_patience: 10

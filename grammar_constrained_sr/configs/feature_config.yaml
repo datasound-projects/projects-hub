@@ -1,0 +1,39 @@
+# Feature Configuration for Stylized Fact Primitives
+
+# Window sizes for rolling calculations (in trading days)
+window_sizes: [5, 10, 20, 60]
+
+# Minimum periods for rolling calculations
+min_periods: 10
+
+# Whether to include raw features (not normalized)
+include_raw: true
+
+# Whether to include cross-sectional rank normalized features
+include_rank: true
+
+# Whether to include z-score normalized features
+include_zscore: true
+
+# Feature-specific settings
+include_wavelet: true    # Include wavelet decomposition features
+include_hilbert: true    # Include Hilbert transform features
+include_spectral: true   # Include spectral analysis features
+
+# Whether to use numba for acceleration (if available)
+use_numba: true
+
+# Hurst exponent estimation method: 'rs' (rescaled range) or 'dfa' (detrended fluctuation analysis)
+hurst_method: "rs"
+
+# Wavelet decomposition settings
+wavelet_type: "db4"     # Daubechies 4 wavelet
+wavelet_level: 3       # Decomposition level
+
+# Spectral analysis settings
+spectral_nfft: 256     # FFT size
+spectral_low_freq_ratio: 0.25  # Ratio for low/high frequency split
+
+# Permutation entropy settings
+perm_entropy_m: 3      # Embedding dimension
+perm_entropy_delay: 1  # Delay between samples
